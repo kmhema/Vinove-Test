@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: Montserrat;
+    background-color: var(--bg-color);
+
+}
+:root{
+    --heading-color:#FF9431;
+    --bg-color:#050505;
+    --text-color:#F9F9F9;
+    --para-color:#797979;
+
+
+}
+
+  nav {
+    padding: 40px 5% 25px 5%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    margin-right: 35px;
+  }
+  
+  ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    /* font-family: Montserrat; */
+  }
+  
+  .checkbtn {
+    font-size: 30px;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+  }
+  
+  #check {
+    display: none;
+  }
+  .nav-btn{
+    background-color: var(--heading-color);
+    padding: 16px 24px;
+    color: var(--bg-color);
+    border-radius: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .checkbtn {
+      display: block;
+      order: 1;
+      margin-right: 20px;
+    }
+  
+    ul {
+      position: fixed;
+      top: 80px;
+      right: -100%;
+      background-color: var(--bg-color);
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+    }
+  
+    ul li {
+      margin: 20px 0;
+    }
+  
+    ul li a {
+      font-size: 20px;
+    }
+  
+    #check:checked ~ ul {
+      right: 0;
+    }
+
+
+  }
+  @media only screen and (max-width: 600px) {
+    .hero-heading h2{
+        font-size: 38px;
+        line-height: 40x;
+      }
+      .hero-description h3{
+        font-size: 30px;
+        line-height: 36px;
+        margin-top: 10px;
+      }
+      .category ul li{
+        display: inline-block;
+        color: var(--text-color);
+        
+    }
+    .gallery{
+        row-gap: 20px;
+        grid-template-columns: repeat(1, 1fr)!important;
+    }
+    .galery-img {
+        display: flex;
+        justify-content: center;
+    }
+    .icon-box-container h2 {
+        font-size: 31px!important;
+        line-height: 39px;
+  }
+  .icon-box-container{
+    margin-top: 20px;
+  }
+  .icon-box-inner-container {
+    grid-template-columns: repeat(1, 35%)!important;
+
+  }
+  .img-box{
+    flex-wrap: wrap;
+  }
+  .img-box-content h3 {
+    font-size: 27px;
+    line-height: 45px;
+  }
+  .img-box-pic img {
+    width: 400px!important;
+}
+.img-box-content h3,.icon-box-container h2  {
+    font-size: 31px!important;
+    line-height: 53.41px!important;
+}
+.icon-box-container {
+    padding-top: 0!important;
+}
+.team-section{
+    grid-template-columns: repeat(1, 400px)!important;
+
+}
+.team-content {
+    text-align: center;
+    padding-bottom: 50px;
+}
+}
+
+
+  /* -----hero section Style------- */
+  .hero-section{
+    padding: 100px 5% 100px 5%;
+    justify-content: center;
+    align-items: center;
+}
+.hero-heading{
+    color: var(--heading-color);
+    /* font-family: Montserrat; */
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58.51px;
+    letter-spacing: 0%;
+    text-align: center;
+
+  }
+  .hero-description{
+    /* font-family: Montserrat; */
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-top: 50px;
+    color: var(--text-color);
+  }
+  #search_field{
+    width: 700px;
+    margin: 50px 0px 0px 10px;
+    padding: 20px 30px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border: 1px solid var(--text-color);
+
+  }
+  ::placeholder{
+    /* font-family: Montserrat; */
+    font-weight: 400;
+    color: var(--text-color);
+    font-size: 20px;
+    line-height: 24.38px;
+    letter-spacing: 0%;
+    text-align: center;
+
+  }
+  .searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #search-btn{
+    background-color: var(--heading-color);
+    padding: 20px 30px;
+    margin: 50px 0px 0px 10px;
+    border: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    column-rule: var(--text-color);
+  }
+.category {
+    padding: 50px 5% 50px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.category p{
+    color: var(--text-color);
+    margin-right: 15px;
+}
+.gallery{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 350px);
+}
+.icon-box-inner-container{
+    padding: 50px 5% 50px 5%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 35%);
+}
+.icon-box-container{
+    padding: 80px 5% 50px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.icon-box-container h2{
+    color: var(--heading-color);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+
+.icon-box-container h3{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-align: center;
+
+}
+.Qualities-icon-box h4, .team-content h2{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 57.93px;
+    letter-spacing: 0%;
+    color: var(--text-color);
+}
+.Qualities-icon-box p, .icon-box-container h3, .team-content p{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0%;   
+    color: var(--para-color); 
+
+}
+.icon-box{
+    padding: 40px;
+    border: 1px dotted #41B537;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+}
+.icon{
+    background-image: url(images/lamp-charge.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    
+}
+.Qualities-icon-box{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.img-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 5% 50px 5%;
+    column-gap: 80px;
+
+}
+.img-box-pic img{
+    width: 500px;
+}
+.img-box-content{
+    width: 50%;
+}
+.img-box-content{
+    width: 484px;
+}
+.img-box-content h3{
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 72.41px;
+    letter-spacing: 0%;
+    
+}
+.img-box-content span{
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--heading-color);
+    line-height: 72.41px;
+    letter-spacing: 0%;
+    
+}
+.team-section{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 5% 50px 5%;
+    grid-template-columns: repeat(3, 400px);
+    column-gap: 20px;
+}
+.team-content img{
+    border-radius: 50px;
+}
